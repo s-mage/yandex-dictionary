@@ -25,6 +25,8 @@ Require gem:
   require 'yandex_dictionary'
 ```
 
+Get api key [there](http://api.yandex.ru/key/form.xml?service=dict').
+
 Set your api key:
 
 ```ruby
