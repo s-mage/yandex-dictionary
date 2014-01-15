@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files -- lib`.split("\n")
   s.license     = 'MIT'
 
-  gem.add_dependency 'httparty'
-  gem.require_paths = ['lib']
+  s.add_dependency 'httparty'
+  s.require_paths = ['lib']
 end

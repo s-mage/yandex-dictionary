@@ -19,13 +19,19 @@ Or install it yourself as:
 
 ## Usage
 
-First, set your api key:
+Require gem:
+
+```ruby
+  require 'yandex_dictionary'
+```
+
+Set your api key:
 
 ```ruby
   Yandex::Dictionary.api_key = 'your.key'
 ```
 
-To get list of directions use get_langs
+To get list of directions use get_langs:
 
 ```ruby
   Yandex::Dictionary.get_langs
