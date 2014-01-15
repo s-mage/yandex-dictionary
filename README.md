@@ -3,6 +3,8 @@ yandex-dictionary
 
 Library for Yandex Dictionary API | Библиотека для API Яндекс.Словарей
 
+[![Code Climate](https://codeclimate.com/repos/52d659986956802fe200296b/badges/c88b32d9e26d7ee0e66f/gpa.png)](https://codeclimate.com/repos/52d659986956802fe200296b/feed)
+
 ## Installation
 
 Add this line to your application's Gemfile:
