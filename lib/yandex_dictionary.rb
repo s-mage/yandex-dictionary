@@ -12,17 +12,17 @@ module Yandex::Dictionary
 
   # List of translation directions.
   def get_langs
-    visit '/getLangs', key: api_key
+    visit('/getLangs').to_a
   end
 
   # Search word or phrase. Return dictionary entry.
   def lookup(text, *lang)
-    options = { key: api_key, text: text, lang: lang.join('-') }
-    visit('/lookup', options)
+    options = { text: text, lang: lang.join('-') }
+    visit('/lookup', options)['def']
   end
 
   def visit(address, options = {})
-    responce = get(address, query: options)
+    responce = get address, query: options.merge(key: api_key)
     check_errors(responce) unless responce.code == 200
     responce
   end
