@@ -15,5 +15,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.add_dependency 'httparty'
+  s.add_development_dependency 'rspec', '~> 3.1'
+  s.add_development_dependency 'webmock'
   s.require_paths = ['lib']
 end
