@@ -46,6 +46,14 @@ To get dictionary entry about word(in json) use lookup method:
   Yandex::Dictionary.lookup 'Amnesty', 'en', 'en'
 ```
 
+Optional parameters can be specified such:
+
+```ruby
+  Yandex::Dictionary.lookup 'Amnesty', 'en', 'en', flags: %(family morpho), ui: 'ru'
+```
+
+(for more details see the [official method definition](https://tech.yandex.com/dictionary/doc/dg/reference/lookup-docpage/))
+
 ## Contributing
 
 1. Fork it

@@ -1,0 +1,48 @@
+PATH
+  remote: .
+  specs:
+    yandex-dictionary (0.2.0)
+      httparty
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    diff-lcs (1.2.5)
+    hashdiff (0.3.1)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    multi_xml (0.6.0)
+    public_suffix (2.0.4)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.4)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
+    safe_yaml (1.0.4)
+    webmock (2.3.1)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rspec (~> 3.1)
+  webmock
+  yandex-dictionary!
+
+BUNDLED WITH
+   1.12.5

@@ -12,13 +12,29 @@ module Yandex::Dictionary
 
   # List of translation directions.
   def get_langs
+    langs
+  end
+
+  def langs
     visit('/getLangs').to_a
   end
 
   # Search word or phrase. Return dictionary entry.
-  def lookup(text, *lang)
-    options = { text: text, lang: lang.join('-') }
+  def lookup(text, from_lang, to_lang, params = {})
+    options = { text: text, lang: [from_lang, to_lang].join('-') }
+    options[:flags] = determine_flags(params[:flags]) if params.key?(:flags)
+    options[:ui] = params[:ui] if params.key?(:ui)
     visit('/lookup', options)['def']
+  end
+
+  protected
+
+  def determine_flags(flags)
+    flag = 0
+    flag += 1 if flags.include?(:family)
+    flag += 4 if flags.include?(:morpho)
+    flag += 8 if flags.include?(:pos)
+    flag
   end
 
   def visit(address, options = {})
